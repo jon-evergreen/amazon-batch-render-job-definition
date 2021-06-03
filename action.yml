@@ -2,7 +2,7 @@ name: 'Amazon Batch "Render Job Definition" Action for GitHub Actions'
 description: "Inserts a container image URI into a an Amazon Batch job definition JSON file, creating a new file."
 branding:
   icon: "cloud"
-  color: "orange"
+  color: "#39b54a"
 inputs:
   job-definition:
     description: "The path to the Batch job definition JSON file"
