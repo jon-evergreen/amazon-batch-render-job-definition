@@ -11,7 +11,7 @@ inputs:
     description: "The URI of the container image to insert into the Batch job definition"
     required: true
 outputs:
-  task-definition:
+  job-definition:
     description: "The path to the rendered task definition file"
 runs:
   using: "node12"
