@@ -14,7 +14,7 @@ async function run() {
       jobDefinitionFile :
       path.join(process.env.GITHUB_WORKSPACE, jobDefinitionFile);
     if (!fs.existsSync(jobDefPath)) {
-      throw new Error(`Task definition file does not exist: ${jobDefinitionFile}`);
+      throw new Error(`Job definition file does not exist: ${jobDefinitionFile}`);
     }
     const jobDefContents = require(jobDefPath);
 

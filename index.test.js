@@ -96,7 +96,7 @@ describe('Render job definition', () => {
 
         await run();
 
-        expect(core.setFailed).toBeCalledWith('job definition file does not exist: does-not-exist-job-definition.json');
+        expect(core.setFailed).toBeCalledWith('Job definition file does not exist: does-not-exist-job-definition.json');
     });
 
     test('error returned for job definition without contaier props', async () => {
