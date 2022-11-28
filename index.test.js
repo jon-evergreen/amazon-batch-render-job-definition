@@ -1,11 +1,22 @@
 const run = require('.');
 const core = require('@actions/core');
-const tmp = require('tmp');
 const fs = require('fs');
+const tmp = require('tmp');
+
 
 jest.mock('@actions/core');
 jest.mock('tmp');
-jest.mock('fs');
+jest.mock('fs', () => ({
+    promises: {
+        access: jest.fn()
+    },
+    constants: {
+        O_CREATE: jest.fn()
+    },
+    rmdirSync: jest.fn(),
+    existsSync: jest.fn(),
+    writeFileSync: jest.fn()
+}));
 
 describe('Render job definition', () => {
 
